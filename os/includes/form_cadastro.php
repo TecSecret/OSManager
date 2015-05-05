@@ -1,266 +1,139 @@
 <form name="os" method="POST" action=" ">
 <div class="row">
+    <div class="col-xs-3">
+        <div class="form-group">
+            <label for="tecnico">Técnico</label>
+            <input type="text" class="form-control" name="tecnico" placeholder="Digite o nome do técnico">
+        </div>
+    </div>
     <div class="col-xs-6">
         <div class="form-group">
-            <label for="nome">Nome</label>
-            <input type="text" class="form-control" name="nome" placeholder="digite seu nome">
+            <label for="cliente">Cliente</label>
+            <select name="cliente" class="form-control">
+
+            </select>
         </div>
     </div>
-    <div class="col-xs-3">
+    <div class="col-xs-6">
         <div class="form-group">
-            <label for="apelido">Apelido</label>
-            <input type="text" class="form-control" name="apelido" placeholder="digite seu apelido">
-        </div>
-    </div>
-    <div class="col-xs-3">
-        <div class="form-group">
-            <label for="cargo">Cargo</label>
-            <input type="text" class="form-control" name="cargo" placeholder="digite seu cargo">
+            <label for="endereco">Endereco</label>
+            <p>Endereco taltal</p>
         </div>
     </div>
 </div>
 <div class="row">
-    <div class="col-xs-3">
-        <div class="form-group">
-            <label for="setor">Setor</label>
-            <input type="text" class="form-control" name="setor" placeholder="digite seu setor">
-        </div>
-    </div>
     <div class="col-xs-3">
         <div class="form-group">
             <label for="CPF">CPF</label>
-            <input type="text" class="form-control" name="CPF" data-mask="999.999.999-99" placeholder="digite seu CPF">
+            <p>CPF TALTAL</p>
         </div>
     </div>
     <div class="col-xs-3">
         <div class="form-group">
-            <label for="RG">RG</label>
-            <input type="text" class="form-control" name="RG" placeholder="digite seu RG">
+            <label for="email">Email</label>
+            <p>EMAIL TALTAL</p>
         </div>
     </div>
-
-    <div class="col-xs-3">
-        <div class="form-group">
-            <label for="CTPS">CTPS</label>
-            <input type="text" class="form-control" name="CTPS" placeholder="digite seu CTPS">
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-3">
-        <div class="form-group">
-            <label for="data_nasc">Data de Nasc.</label>
-            <input type="text" class="form-control" name="data_nasc" data-mask="99/99/9999" placeholder="digite sua data de nascimento">
-        </div>
-    </div>
-    <div class="col-xs-3">
-        <div class="form-group">
-            <label for="tipo_sang">Tipo Sanguíneo</label>
-            <input type="text" class="form-control" name="tipo_sang" placeholder="digite seu tipo sanguineo">
-        </div>
-    </div>
-    <div class="col-xs-3">
-        <div class="form-group">
-            <label for="num_filho">Estado Civil:</label>
-            <select name="estado_civil" class="form-control">
-                <option value="Solteiro(a)">Solteiro(a)</option>
-                <option value="Casado(a)">Casado(a)</option>
-                <option value="Víuvo(a)">Víuvo(a)</option>
-                <option value="Separado(a)">Separado(a)</option>
-
-            </select>
-        </div>
-    </div>
-
-    <div class="col-xs-3">
-        <div class="form-group">
-            <label for="num_filho">N filhos:</label>
-            <input type="text" class="form-control" name="num_filho" placeholder="0">
-        </div>
-    </div>
-</div>
-<div class="row">
-
     <div class="col-xs-6">
         <div class="form-group">
-            <label for="endereco">Endereço</label>
-            <input type="text" class="form-control" name="endereco" placeholder="digite seu endereco">
+            <label for="telefones">Telefones</label>
+            <p>(37)XXXX-XXXX | (37)XXXX-XXXX | (37)XXXX-XXXX</p>
         </div>
     </div>
-
-    <div class="col-xs-3">
-        <div class="form-group">
-            <label for="cidade">Cidade</label>
-            <input type="text" class="form-control" name="cidade" placeholder="digite seu cidade">
-        </div>
-    </div>
-    <div class="col-xs-3">
-        <div class="form-group">
-            <label for="bairro">Bairro</label>
-            <input type="text" class="form-control" name="bairro" placeholder="digite seu bairro">
-        </div>
-    </div>
-
 </div>
 <div class="row">
-    <div class="col-xs-2">
+    <div class="col-xs-3">
         <div class="form-group">
-            <label for="estado">Estado:</label>
-            <select name="estado" class="form-control">
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="AC">Acre</option>
-                <option value="AL">Alagoas</option>
-                <option value="AP">Amap&aacute;</option>
-                <option value="AM">Amazonas</option>
-                <option value="BA">Bahia</option>
-                <option value="CE">Cear&aacute;</option>
-                <option value="DF">Distrito Federal</option>
-                <option value="ES">Esp&iacute;rito Santo</option>
-                <option value="GO">Goi&aacute;s</option>
-                <option value="MA">Maranh&atilde;o</option>
-                <option value="MT">Mato Grosso</option>
-                <option value="MS">Mato Grosso do Sul</option>
-                <option value="MG">Minas Gerais</option>
-                <option value="PA">Par&aacute;</option>
-                <option value="PB">Para&iacute;ba</option>
-                <option value="PR">Paran&aacute;</option>
-                <option value="PE">Pernambuco</option>
-                <option value="PI">Piau&iacute;</option>
-                <option value="RN">Rio Grande do Norte</option>
-                <option value="RS">Rio Grande do Sul</option>
-                <option value="RO">Rond&ocirc;nia</option>
-                <option value="RR">Roraima</option>
-                <option value="SC">Santa Catarina</option>
-                <option value="SP">S&atilde;o Paulo</option>
-                <option value="SE">Sergipe</option>
-                <option value="TO">Tocantins</option>
+            <label for="equipamento">Equipamento</label>
+            <select name="equipamento" class="form-control">
+                <option>Selecione</option>
+                <option value="COMPUTADOR">Computador</option>
+                <option value="MONITOR">Monitor</option>
+                <option value="CPU">CPU</option>
+                <option value="NOTEBOOK">Notebook</option>
+                <option value="IMPRESSORA">Impressora</option>
+                <option value="SCANNER">Scaner</option>
+                <option value="NOBREAK">Nobreak</option>
+                <option value="ESTABILIZADOR">Estabilizador</option>
+                <option value="TELEVISOR">Televisor</option>
+                <option value="MICROONDAS">Microondas</option>
+                <option value="APARELHO DE SOM">Aparelho de Som</option>
+                <option value="DVD">DVD</option>
+                <option value="VIDEO CASSETE">Video Cassete</option>
+                <option value="OUTROS">Outros</option>
             </select>
         </div>
     </div>
-    <div class="col-xs-2">
+    <div class="col-xs-6">
         <div class="form-group">
-            <label for="CEP">CEP</label>
-            <input type="text" class="form-control" name="CEP" data-mask="99999-999" placeholder="00000-000">
+            <label for="marca">Marca</label>
+            <input type="text" class="form-control" name="marca" placeholder="Digite a marca do equipamento">
         </div>
     </div>
     <div class="col-xs-3">
         <div class="form-group">
-            <label for="fone_comercial">Fone Comercial</label>
-            <input type="text" class="form-control" name="fone_comercial" data-mask="(99)9999-9999" placeholder="(XX)XXXX-XXXX">
+            <label for="garantia">Garantia</label>
+            <select name="garantia" class="form-control">
+                <option value="nao">Não</option>
+                <option value="sim">Sim</option>
+            </select>
         </div>
     </div>
-    <div class="col-xs-3">
-        <div class="form-group">
-            <label for="fone_residencial">Fone Residencial</label>
-            <input type="text" class="form-control" name="fone_residencial" data-mask="(99)9999-9999" placeholder="(XX)XXXX-XXXX">
-        </div>
-    </div>
-    <div class="col-xs-2">
-        <div class="form-group">
-            <label for="celular">Celular</label>
-            <input type="text" class="form-control" name="celular" data-mask="(99)9999-9999" placeholder="(XX)XXXX-XXXX">
-        </div>
-    </div>
-
 </div>
 <div class="row">
-    <div class="col-xs-9">
+    <div class="col-xs-12">
         <div class="form-group">
-            <label for="escolaridade">Escolaridade</label><br>
-            <label class="radio-inline">
-                <input type="radio" name="escolaridade" value="1º Grau" />
-                1&ordm; Grau
-            </label>
-            <label class="radio-inline">
-                <input type="radio" name="escolaridade" value="2º Grau" />
-                2&ordm; Grau
-            </label>
-            <label class="radio-inline">
-                <input type="radio" name="escolaridade" value="3º Grau" />
-                3&ordm; Grau
-            </label>
-            <label class="radio-inline">
-                <input type="radio" name="escolaridade" value="Pós Graduado" />
-                P&oacute;s Graduado
-            </label>
-            <label class="radio-inline">
-                <input type="radio" name="escolaridade" value="Mestrado" />
-                Mestrado
-            </label>
-            <label class="radio-inline">
-                <input type="radio" name="escolaridade" value="Doutorado" />
-                Doutorado
-            </label>
-            <label class="radio-inline">
-                <input type="radio" name="escolaridade" value="Pós Doutorado" />
-                P&oacute;s Doutorado </label>
+            <label for="modelo">Modelo</label>
+            <input type="text" class="form-control" name="modelo"  placeholder="Digite o modelo do equipamento">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-3">
+        <div class="form-group">
+            <label for="num_patrimonio">N Patrimonio</label>
+            <input type="text" class="form-control" name="num_patrimonio" placeholder="Digite o numero do patrimonio">
+        </div>
+    </div>
+    <div class="col-xs-3">
+        <div class="form-group">
+            <label for="num_serie">N Serie</label>
+            <input type="text" class="form-control" name="num_serie" placeholder="Digite o numero da serie">
+        </div>
+    </div>
+    <div class="col-xs-6">
+        <div class="form-group">
+            <label for="setor">Setor</label>
+            <input type="text" class="form-control" name="setor" placeholder="Digite o setor">
         </div>
     </div>
 </div>
 <div class="row">
     <div class="col-xs-4">
         <div class="form-group">
-            <label for="situacao">Situação</label><br>
-            <label class="radio-inline">
-                <input type="radio" name="situacao" value="Completo" />
-                Completo
-            </label>
-            <label class="radio-inline">
-                <input type="radio" name="situacao" value="Incompleto" />
-                Incompleto
-            </label>
-            <label class="radio-inline">
-                <input type="radio" name="situacao" value="Cursando" />
-                Cursando
-            </label>
+            <label for="data_entrada">Data da Entrada:</label>
+            <input type="text" class="form-control" name="data_entrada" data-mask="99/99/9999" placeholder="Digite a data da entrada">
         </div>
     </div>
-    <div class="col-xs-2">
+    <div class="col-xs-4">
         <div class="form-group">
-            <label for="ano">Qual Ano?</label>
-            <input type="text" class="form-control" name="ano" placeholder="digite seu ano">
+            <label for="hora_entrada">Hora da Entrada:</label>
+            <input type="text" class="form-control" name="hora_entrada" data-mask="99:99" placeholder="Digite a hora da entrada">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-6">
+        <div class="form-group">
+            <label for="diagnostico">Diagnostico do cliente:</label>
+            <textarea class="form-control" rows="5" name="diagnostico"></textarea>
         </div>
     </div>
 </div>
 <div class="row">
     <div class="col-xs-3">
         <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" class="form-control" name="email" placeholder="digite seu email">
-        </div>
-    </div>
-    <div class="col-xs-3">
-        <div class="form-group">
-            <label for="login">Login</label>
-            <input type="text" class="form-control" name="login" placeholder="digite seu login">
-        </div>
-    </div>
-    <div class="col-xs-3">
-        <div class="form-group">
-            <label for="senha">Senha</label>
-            <input type="password" class="form-control" name="senha" placeholder="digite sua senha">
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-3">
-        <div class="form-group">
-            <label for="nivel">Nível</label><br>
-            <label class="radio-inline">
-                <input type="radio" name="nivel" value="Operador" />
-                Operador
-            </label>
-            <label class="radio-inline">
-                <input type="radio" name="nivel" value="Administrador" />
-                Administrador
-            </label>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-3">
-        <div class="form-group">
-            <button id="funcionario" name="funcionario" type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
+            <button id="os" name="os" type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
         </div>
     </div>
 </div>
