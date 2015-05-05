@@ -1,6 +1,6 @@
 <?php include '../conexao/data.php';?>
 <?php
-$query = sprintf("SELECT codigo, nome, cpf, cargo, setor, login FROM funcionario ORDER BY codigo");
+$query = sprintf("SELECT Cliente, Funcionario, Equipamento, Data_Entrada, Problemacliente FROM ordemservico ORDER BY Cod_Equipamento");
 $dados = mysql_query($query, $data) or die(mysql_error());
 ?>
 
@@ -16,10 +16,10 @@ $dados = mysql_query($query, $data) or die(mysql_error());
                 <?php include '../includes/navbar_lateral.php';?>
                 <div class="col-sm-9 col-md-10 main">
                     <h1 class="page-header">
-                        Funcionários
+                        Ordem de Serviços
                     </h1>
-                    <a class="btn btn-labeled btn-success btn-md" href="add_funcionario.php">
-                        <span class="btn-label" aria-hidden="true"><i class="glyphicon glyphicon-plus"></i></span> Inserir Funcionário
+                    <a class="btn btn-labeled btn-success btn-md" href="add_os.php">
+                        <span class="btn-label" aria-hidden="true"><i class="glyphicon glyphicon-plus"></i></span> Inserir Ordem de Serviço
                     </a>
 
                     <div class="table-responsive">
@@ -27,26 +27,25 @@ $dados = mysql_query($query, $data) or die(mysql_error());
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Nome</th>
-                                <th>CPF</th>
-                                <th>Cargo</th>
-                                <th>Setor</th>
-                                <th>Login</th>
-                                <th>Ações</th>
+                                <th>Data Entrada</th>
+                                <th>Cliente</th>
+                                <th>Problema Apresentado</th>
+                                <th>Equipamento</th>
+                                <th>Func. Responsavel</th>
                             </tr>
                             </thead>
                             <tbody>
                             <?php while($linha = mysql_fetch_array($dados)){ ?>
                             <tr>
-                                <td><?=$linha['codigo']?></td>
-                                <td><?=$linha['nome']?></td>
-                                <td><?=$linha['cpf']?></td>
-                                <td><?=$linha['cargo']?></td>
-                                <td><?=$linha['setor']?></td>
-                                <td><?=$linha['login']?></td>
+                                <td><?=$linha['Cod_Equipamento']?></td>
+                                <td><?=$linha['Data_Entrada']?></td>
+                                <td><?=$linha['Cliente']?></td>
+                                <td><?=$linha['Problemacliente']?></td>
+                                <td><?=$linha['Equipamento']?></td>
+                                <td><?=$linha['Funcionario']?></td>
                                 <td>
-                                    <a href="editar_funcionario.php?id=<?php echo $linha['codigo'] ?>" class="btn-sm btn-primary">Editar</a>
-                                    <a href="deletar_funcionario.php?id=<?php echo $linha['codigo'] ?>" class="btn-sm btn-danger">Deletar</a>
+                                    <a href="editar_os.php?id=<?php echo $linha['Cod_Equipamento'] ?>" class="btn-sm btn-primary">Editar</a>
+                                    <a href="deletar_os.php?id=<?php echo $linha['Cod_Equipamento'] ?>" class="btn-sm btn-danger">Deletar</a>
                                 </td>
                             </tr>
                             <?php

@@ -1,4 +1,4 @@
-<form name="funcionario" method="POST" action=" ">
+<form name="os" method="POST" action=" ">
 <div class="row">
     <div class="col-xs-6">
         <div class="form-group">

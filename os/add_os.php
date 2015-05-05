@@ -28,31 +28,21 @@ if (!function_exists("GetSQLValueString")) {
     }
 }
 
-if(isset($_POST['funcionario'])){
+if(isset($_POST['os'])){
     include '../conexao/data.php';
-    $sql  = sprintf("INSERT INTO funcionario (nome, apelido, cargo, setor, cpf, rg, ctps, data_nasc, estado_civil, email, celular, escolaridade, situacao, ano, endereco, bairro, cidade, estado, cep, login, senha, nivel) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
-        GetSQLValueString($_POST['nome'], "text"),
-        GetSQLValueString($_POST['apelido'], "text"),
-        GetSQLValueString($_POST['cargo'], "text"),
+    $sql  = sprintf("INSERT INTO ordemservico (Funcionario, Data_Entrada, Hora_Entrada, Cliente, Equipamento, Modelo, Marca, Patrimonio, Serie, Setor, Garantia, Problemacliente) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+        GetSQLValueString($_POST['Funcionario'], "text"),
+        GetSQLValueString($_POST['Data_Entrada'], "text"),
+        GetSQLValueString($_POST['Hora_Entrada'], "text"),
+        GetSQLValueString($_POST['Cliente'], "text"),
+        GetSQLValueString($_POST['Equipamento'], "text"),
+        GetSQLValueString($_POST['Modelo'], "text"),
+        GetSQLValueString($_POST['Marca'], "text"),
+        GetSQLValueString($_POST['Patrimonio'], "text"),
+        GetSQLValueString($_POST['serie'], "text"),
         GetSQLValueString($_POST['setor'], "text"),
-        GetSQLValueString($_POST['CPF'], "text"),
-        GetSQLValueString($_POST['RG'], "text"),
-        GetSQLValueString($_POST['CTPS'], "text"),
-        GetSQLValueString($_POST['data_nasc'], "text"),
-        GetSQLValueString($_POST['estado_civil'], "text"),
-        GetSQLValueString($_POST['email'], "text"),
-        GetSQLValueString($_POST['celular'], "text"),
-        GetSQLValueString($_POST['escolaridade'], "text"),
-        GetSQLValueString($_POST['situacao'], "text"),
-        GetSQLValueString($_POST['ano'], "text"),
-        GetSQLValueString($_POST['endereco'], "text"),
-        GetSQLValueString($_POST['bairro'], "text"),
-        GetSQLValueString($_POST['cidade'], "text"),
-        GetSQLValueString($_POST['estado'], "text"),
-        GetSQLValueString($_POST['CEP'], "text"),
-        GetSQLValueString($_POST['login'], "text"),
-        GetSQLValueString($_POST['senha'], "text"),
-        GetSQLValueString($_POST['nivel'], "text"));
+        GetSQLValueString($_POST['Garantia'], "text"),
+        GetSQLValueString($_POST['Problemacliente'], "text"));
     $result = mysql_query($sql,$data)  or die(mysql_error());
     mysql_close($data);
     header('location: index.php');
