@@ -28,36 +28,22 @@ if (!function_exists("GetSQLValueString")) {
     }
 }
 
-if(isset($_POST['funcionario'])){
+if(isset($_POST['os'])){
     include '../conexao/data.php';
 
-    $sql  =  sprintf("UPDATE funcionario SET nome=%s, apelido=%s, cargo=%s, setor=%s, cpf=%s, rg=%s, ctps=%s, data_nasc=%s, estado_civil=%s, numero_filhos=%s, tipo_sanguineo=%s, email=%s, fone_com=%s, fone_res=%s, celular=%s, escolaridade=%s, situacao=%s, ano=%s, endereco=%s, bairro=%s, cidade=%s, estado=%s, cep=%s, login=%s, senha=%s, nivel=%s WHERE codigo=%s",
-                    GetSQLValueString($_POST['nome'], "text"),
-                    GetSQLValueString($_POST['apelido'], "text"),
-                    GetSQLValueString($_POST['cargo'], "text"),
+    $sql  =  sprintf("UPDATE ordemservico SET Funcionario=%s, Data_Entrada=%s, Hora_Entrada=%s, Cliente=%s, Equipamento=%s, Modelo=%s, Marca=%s, Patrimonio=%s, Serie=%s, Setor=%s, Garantia=%s, Problemacliente=%s WHERE Cod_Equipamento=%s",
+                    GetSQLValueString($_POST['tecnico'], "text"),
+                    GetSQLValueString($_POST['data_entrada'], "text"),
+                    GetSQLValueString($_POST['hora_entrada'], "text"),
+                    GetSQLValueString($_POST['cliente'], "text"),
+                    GetSQLValueString($_POST['equipamento'], "text"),
+                    GetSQLValueString($_POST['modelo'], "text"),
+                    GetSQLValueString($_POST['marca'], "text"),
+                    GetSQLValueString($_POST['num_patrimonio'], "text"),
+                    GetSQLValueString($_POST['num_serie'], "text"),
                     GetSQLValueString($_POST['setor'], "text"),
-                    GetSQLValueString($_POST['CPF'], "text"),
-                    GetSQLValueString($_POST['RG'], "text"),
-                    GetSQLValueString($_POST['CTPS'], "text"),
-                    GetSQLValueString($_POST['data_nasc'], "text"),
-                    GetSQLValueString($_POST['estado_civil'], "text"),
-                    GetSQLValueString($_POST['num_filho'], "text"),
-                    GetSQLValueString($_POST['tipo_sang'], "text"),
-                    GetSQLValueString($_POST['email'], "text"),
-                    GetSQLValueString($_POST['fone_comercial'], "text"),
-                    GetSQLValueString($_POST['fone_residencial'], "text"),
-                    GetSQLValueString($_POST['celular'], "text"),
-                    GetSQLValueString($_POST['escolaridade'], "text"),
-                    GetSQLValueString($_POST['situacao'], "text"),
-                    GetSQLValueString($_POST['ano'], "text"),
-                    GetSQLValueString($_POST['endereco'], "text"),
-                    GetSQLValueString($_POST['bairro'], "text"),
-                    GetSQLValueString($_POST['cidade'], "text"),
-                    GetSQLValueString($_POST['estado'], "text"),
-                    GetSQLValueString($_POST['CEP'], "text"),
-                    GetSQLValueString($_POST['login'], "text"),
-                    GetSQLValueString($_POST['senha'], "text"),
-                    GetSQLValueString($_POST['nivel'], "text"),
+                    GetSQLValueString($_POST['garantia'], "text"),
+                    GetSQLValueString($_POST['diagnostico'], "text"),
                     GetSQLValueString($_POST['id'], "int"));
 
     $result = mysql_query($sql, $data)  or die(mysql_error());
@@ -66,18 +52,18 @@ if(isset($_POST['funcionario'])){
 }
 ?>
 <?php
-if(empty($_POST['funcionario'])){
+if(empty($_POST['os'])){
 
     include '../conexao/data.php';
 
     $id =  $_GET['id'];
-
-    $sql = "SELECT * FROM funcionario WHERE codigo = '$id'";
-
+    $sql = "SELECT * FROM ordemservico WHERE Cod_Equipamento = '$id'";
     $dados  = mysql_query($sql);
+    $ordem_servico = mysql_fetch_array($dados) or die(mysql_error());
 
-    $funcionario = mysql_fetch_array($dados) or die(mysql_error());
-
+    $sql = "SELECT * FROM cliente WHERE nome = '".$ordem_servico["Cliente"]."'";
+    $dados = mysql_query($sql);
+    $cliente = mysql_fetch_array($dados) or die(mysql_error());
     mysql_close($data);
 }
 ?>

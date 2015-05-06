@@ -18,11 +18,11 @@ $dados = mysql_query($query, $data) or die(mysql_error());
                     <h1 class="page-header">
                         Ordem de Serviços
                     </h1>
-                    <a class="btn btn-labeled btn-success btn-md" href="add_os.php">
+                    <a class="btn btn-labeled btn-success btn-md" href="selecionar_cliente.php">
                         <span class="btn-label" aria-hidden="true"><i class="glyphicon glyphicon-plus"></i></span> Inserir Ordem de Serviço
                     </a>
 
-                    <div class="table-responsive">
+                    <div class="table-responsive table-condensed">
                         <table class="table table-striped">
                             <thead>
                             <tr>
@@ -31,8 +31,9 @@ $dados = mysql_query($query, $data) or die(mysql_error());
                                 <th>Cliente</th>
                                 <th>Problema Apresentado</th>
                                 <th>Equipamento</th>
-                                <th>Func. Responsavel</th>
-                                <th>Ações</th>
+                                <th>Funcionário</th>
+                                <th></th>
+                                <th></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -46,6 +47,9 @@ $dados = mysql_query($query, $data) or die(mysql_error());
                                 <td><?=$linha['Funcionario']?></td>
                                 <td>
                                     <a href="editar_os.php?id=<?php echo $linha['Cod_Equipamento'] ?>" class="btn-sm btn-primary">Editar</a>
+
+                                </td>
+                                <td>
                                     <a href="deletar_os.php?id=<?php echo $linha['Cod_Equipamento'] ?>" class="btn-sm btn-danger">Deletar</a>
                                 </td>
                             </tr>

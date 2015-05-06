@@ -3,7 +3,7 @@
         <li><a href="#"><i class="glyphicon glyphicon-home"></i> Principal</a></li>
         <li><a href="funcionario/"><i class="glyphicon glyphicon-wrench"></i> Funcionarios</a></li>
         <li><a href="#"><i class="glyphicon glyphicon-user"></i> Clientes</a></li>
-        <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Ordem de Serviço</a></li>
+        <li><a href="os/"><i class="glyphicon glyphicon-list-alt"></i> Ordem de Serviço</a></li>
     </ul>
 </div>
         

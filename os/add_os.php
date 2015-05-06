@@ -1,4 +1,6 @@
 <?php
+
+
 if (!function_exists("GetSQLValueString")) {
     function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "")
     {
@@ -31,21 +33,31 @@ if (!function_exists("GetSQLValueString")) {
 if(isset($_POST['os'])){
     include '../conexao/data.php';
     $sql  = sprintf("INSERT INTO ordemservico (Funcionario, Data_Entrada, Hora_Entrada, Cliente, Equipamento, Modelo, Marca, Patrimonio, Serie, Setor, Garantia, Problemacliente) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
-        GetSQLValueString($_POST['Funcionario'], "text"),
-        GetSQLValueString($_POST['Data_Entrada'], "text"),
-        GetSQLValueString($_POST['Hora_Entrada'], "text"),
-        GetSQLValueString($_POST['Cliente'], "text"),
-        GetSQLValueString($_POST['Equipamento'], "text"),
-        GetSQLValueString($_POST['Modelo'], "text"),
-        GetSQLValueString($_POST['Marca'], "text"),
-        GetSQLValueString($_POST['Patrimonio'], "text"),
-        GetSQLValueString($_POST['serie'], "text"),
+        GetSQLValueString($_POST['tecnico'], "text"),
+        GetSQLValueString($_POST['data_entrada'], "text"),
+        GetSQLValueString($_POST['hora_entrada'], "text"),
+        GetSQLValueString($_POST['cliente'], "text"),
+        GetSQLValueString($_POST['equipamento'], "text"),
+        GetSQLValueString($_POST['modelo'], "text"),
+        GetSQLValueString($_POST['marca'], "text"),
+        GetSQLValueString($_POST['num_patrimonio'], "text"),
+        GetSQLValueString($_POST['num_serie'], "text"),
         GetSQLValueString($_POST['setor'], "text"),
-        GetSQLValueString($_POST['Garantia'], "text"),
-        GetSQLValueString($_POST['Problemacliente'], "text"));
+        GetSQLValueString($_POST['garantia'], "text"),
+        GetSQLValueString($_POST['diagnostico'], "text"));
     $result = mysql_query($sql,$data)  or die(mysql_error());
     mysql_close($data);
     header('location: index.php');
+}
+
+if(isset($_GET['id_cliente'])) {
+    include '../conexao/data.php';
+    $id_cliente = $_GET['id_cliente'];
+    $query_cliente = sprintf("SELECT * FROM cliente WHERE codigo = $id_cliente");
+    $resultado_cliente = mysql_query($query_cliente, $data) or die(mysql_error());
+    mysql_close($data);
+}else{
+    header('Location: index.php');
 }
 ?>
 

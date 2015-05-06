@@ -11,6 +11,7 @@
         <div class="form-group">
             <label for="cliente">Cliente:</label>
             <select name="cliente" class="form-control" onchange="MM_jumpMenu('parent',this,0)" >
+                <option>Selecione</option>
                 <?php while($linha = mysql_fetch_array($dados)){ ?>
                 <option value="add_os.php?id_cliente=<?php echo $linha['codigo']; ?>"> <?php echo $linha['nome']?> </option>
                 <?php

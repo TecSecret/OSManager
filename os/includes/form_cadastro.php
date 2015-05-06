@@ -1,4 +1,5 @@
 <form name="os" method="POST" action=" ">
+<?php while($cliente= mysql_fetch_array($resultado_cliente)){?>
 <div class="row">
     <div class="col-xs-3">
         <div class="form-group">
@@ -10,14 +11,15 @@
         <div class="form-group">
             <label for="cliente">Cliente</label>
             <select name="cliente" class="form-control">
-
+                <option><?=$cliente['nome']?></option>
             </select>
         </div>
     </div>
+
     <div class="col-xs-6">
         <div class="form-group">
             <label for="endereco">Endereco</label>
-            <p>Endereco taltal</p>
+            <p><?=$cliente['endereco']?></p>
         </div>
     </div>
 </div>
@@ -25,22 +27,25 @@
     <div class="col-xs-3">
         <div class="form-group">
             <label for="CPF">CPF</label>
-            <p>CPF TALTAL</p>
+            <p><?=$cliente['cpf']?></p>
         </div>
     </div>
     <div class="col-xs-3">
         <div class="form-group">
             <label for="email">Email</label>
-            <p>EMAIL TALTAL</p>
+            <p><?=$cliente['email']?></p>
         </div>
     </div>
     <div class="col-xs-6">
         <div class="form-group">
             <label for="telefones">Telefones</label>
-            <p>(37)XXXX-XXXX | (37)XXXX-XXXX | (37)XXXX-XXXX</p>
+            <p><?=$cliente['fone_com']?> | <?=$cliente['fone_res']?> | <?=$cliente['celular']?></p>
         </div>
     </div>
 </div>
+<?php
+}
+?>
 <div class="row">
     <div class="col-xs-3">
         <div class="form-group">
