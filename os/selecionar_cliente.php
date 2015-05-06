@@ -23,7 +23,7 @@ $dados = mysql_query($query, $data) or die(mysql_error());
             <?php include '../includes/navbar_lateral.php';?>
             <div class="col-sm-9 col-md-10 main">
                 <h1 class="page-header">
-                    Inserir Ordem de Serviço
+                    Selecione o Cliente
                 </h1>
                 <?php include 'includes/form_selecionar.php';?>
             </div>
