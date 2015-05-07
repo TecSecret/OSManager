@@ -4,7 +4,7 @@
     <div class="col-xs-3">
         <div class="form-group">
             <label for="tecnico">Técnico</label>
-            <input type="text" class="form-control" name="tecnico" placeholder="Digite o nome do técnico">
+            <input type="text" class="form-control" name="tecnico" placeholder="Digite o nome do técnico" value="<?php echo $_SESSION["login"]?>">
         </div>
     </div>
     <div class="col-xs-6">

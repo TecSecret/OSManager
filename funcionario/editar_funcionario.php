@@ -1,69 +1,46 @@
 <?php
-if (!function_exists("GetSQLValueString")) {
-    function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "")
-    {
-        $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
+    $nivel_autorizado = "1";
+    $redirecionar_login = "../login.php";
+    include '../includes/verificar_acesso.php';
+?>
+<?php
+    include '../includes/get_sql_value_string.php';
+    if(isset($_POST['funcionario'])){
+        include '../conexao/data.php';
 
-        $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
+        $sql  =  sprintf("UPDATE funcionario SET nome=%s, apelido=%s, cargo=%s, setor=%s, cpf=%s, rg=%s, ctps=%s, data_nasc=%s, estado_civil=%s, numero_filhos=%s, tipo_sanguineo=%s, email=%s, fone_com=%s, fone_res=%s, celular=%s, escolaridade=%s, situacao=%s, ano=%s, endereco=%s, bairro=%s, cidade=%s, estado=%s, cep=%s, login=%s, senha=%s, nivel=%s WHERE codigo=%s",
+                        GetSQLValueString($_POST['nome'], "text"),
+                        GetSQLValueString($_POST['apelido'], "text"),
+                        GetSQLValueString($_POST['cargo'], "text"),
+                        GetSQLValueString($_POST['setor'], "text"),
+                        GetSQLValueString($_POST['CPF'], "text"),
+                        GetSQLValueString($_POST['RG'], "text"),
+                        GetSQLValueString($_POST['CTPS'], "text"),
+                        GetSQLValueString($_POST['data_nasc'], "text"),
+                        GetSQLValueString($_POST['estado_civil'], "text"),
+                        GetSQLValueString($_POST['num_filho'], "text"),
+                        GetSQLValueString($_POST['tipo_sang'], "text"),
+                        GetSQLValueString($_POST['email'], "text"),
+                        GetSQLValueString($_POST['fone_comercial'], "text"),
+                        GetSQLValueString($_POST['fone_residencial'], "text"),
+                        GetSQLValueString($_POST['celular'], "text"),
+                        GetSQLValueString($_POST['escolaridade'], "text"),
+                        GetSQLValueString($_POST['situacao'], "text"),
+                        GetSQLValueString($_POST['ano'], "text"),
+                        GetSQLValueString($_POST['endereco'], "text"),
+                        GetSQLValueString($_POST['bairro'], "text"),
+                        GetSQLValueString($_POST['cidade'], "text"),
+                        GetSQLValueString($_POST['estado'], "text"),
+                        GetSQLValueString($_POST['CEP'], "text"),
+                        GetSQLValueString($_POST['login'], "text"),
+                        GetSQLValueString($_POST['senha'], "text"),
+                        GetSQLValueString($_POST['nivel'], "text"),
+                        GetSQLValueString($_POST['id'], "int"));
 
-        switch ($theType) {
-            case "text":
-                $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-                break;
-            case "long":
-            case "int":
-                $theValue = ($theValue != "") ? intval($theValue) : "NULL";
-                break;
-            case "double":
-                $theValue = ($theValue != "") ? "'" . doubleval($theValue) . "'" : "NULL";
-                break;
-            case "date":
-                $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-                break;
-            case "defined":
-                $theValue = ($theValue != "") ? $theDefinedValue : $theNotDefinedValue;
-                break;
-        }
-        return $theValue;
+        $result = mysql_query($sql, $data)  or die(mysql_error());
+        mysql_close($data);
+        header("location: index.php");
     }
-}
-
-if(isset($_POST['funcionario'])){
-    include '../conexao/data.php';
-
-    $sql  =  sprintf("UPDATE funcionario SET nome=%s, apelido=%s, cargo=%s, setor=%s, cpf=%s, rg=%s, ctps=%s, data_nasc=%s, estado_civil=%s, numero_filhos=%s, tipo_sanguineo=%s, email=%s, fone_com=%s, fone_res=%s, celular=%s, escolaridade=%s, situacao=%s, ano=%s, endereco=%s, bairro=%s, cidade=%s, estado=%s, cep=%s, login=%s, senha=%s, nivel=%s WHERE codigo=%s",
-                    GetSQLValueString($_POST['nome'], "text"),
-                    GetSQLValueString($_POST['apelido'], "text"),
-                    GetSQLValueString($_POST['cargo'], "text"),
-                    GetSQLValueString($_POST['setor'], "text"),
-                    GetSQLValueString($_POST['CPF'], "text"),
-                    GetSQLValueString($_POST['RG'], "text"),
-                    GetSQLValueString($_POST['CTPS'], "text"),
-                    GetSQLValueString($_POST['data_nasc'], "text"),
-                    GetSQLValueString($_POST['estado_civil'], "text"),
-                    GetSQLValueString($_POST['num_filho'], "text"),
-                    GetSQLValueString($_POST['tipo_sang'], "text"),
-                    GetSQLValueString($_POST['email'], "text"),
-                    GetSQLValueString($_POST['fone_comercial'], "text"),
-                    GetSQLValueString($_POST['fone_residencial'], "text"),
-                    GetSQLValueString($_POST['celular'], "text"),
-                    GetSQLValueString($_POST['escolaridade'], "text"),
-                    GetSQLValueString($_POST['situacao'], "text"),
-                    GetSQLValueString($_POST['ano'], "text"),
-                    GetSQLValueString($_POST['endereco'], "text"),
-                    GetSQLValueString($_POST['bairro'], "text"),
-                    GetSQLValueString($_POST['cidade'], "text"),
-                    GetSQLValueString($_POST['estado'], "text"),
-                    GetSQLValueString($_POST['CEP'], "text"),
-                    GetSQLValueString($_POST['login'], "text"),
-                    GetSQLValueString($_POST['senha'], "text"),
-                    GetSQLValueString($_POST['nivel'], "text"),
-                    GetSQLValueString($_POST['id'], "int"));
-
-    $result = mysql_query($sql, $data)  or die(mysql_error());
-    mysql_close($data);
-    header("location: index.php");
-}
 ?>
 <?php
 if(empty($_POST['funcionario'])){

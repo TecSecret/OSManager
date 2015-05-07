@@ -4,7 +4,7 @@
     <div class="col-xs-6">
         <div class="form-group">
             <label for="nome">Nome</label>
-            <input type="text" class="form-control" name="nome" placeholder="digite seu nome" value="<?php echo $funcionario["nome"]; ?>">
+            <input type="text" class="form-control" name="nome" placeholder="digite seu nome" value="<?php echo $funcionario["nome"]; ?>" required>
         </div>
     </div>
     <div class="col-xs-3">
@@ -16,7 +16,7 @@
     <div class="col-xs-3">
         <div class="form-group">
             <label for="cargo">Cargo</label>
-            <input type="text" class="form-control" name="cargo" placeholder="digite seu cargo" value="<?php echo $funcionario["cargo"];?>">
+            <input type="text" class="form-control" name="cargo" placeholder="digite seu cargo" value="<?php echo $funcionario["cargo"];?>" required>
         </div>
     </div>
 </div>
@@ -24,13 +24,13 @@
     <div class="col-xs-3">
         <div class="form-group">
             <label for="setor">Setor</label>
-            <input type="text" class="form-control" name="setor" placeholder="digite seu setor" value="<?php echo $funcionario["setor"];?>">
+            <input type="text" class="form-control" name="setor" placeholder="digite seu setor" value="<?php echo $funcionario["setor"];?>" required>
         </div>
     </div>
     <div class="col-xs-3">
         <div class="form-group">
             <label for="CPF">CPF</label>
-            <input type="text" class="form-control" name="CPF" placeholder="digite seu CPF" data-mask="999.999.999-99" value="<?php echo $funcionario["cpf"];?>">
+            <input type="text" class="form-control" name="CPF" placeholder="digite seu CPF" data-mask="999.999.999-99" value="<?php echo $funcionario["cpf"];?>" required>
         </div>
     </div>
     <div class="col-xs-3">
@@ -227,19 +227,19 @@
     <div class="col-xs-3">
         <div class="form-group">
             <label for="email">E-mail</label>
-            <input type="email" class="form-control" name="email" placeholder="digite seu email" value="<?php echo $funcionario["email"];?>">
+            <input type="email" class="form-control" name="email" placeholder="digite seu email" value="<?php echo $funcionario["email"];?>" required>
         </div>
     </div>
     <div class="col-xs-3">
         <div class="form-group">
             <label for="login">Login</label>
-            <input type="text" class="form-control" name="login" placeholder="digite seu login" value="<?php echo $funcionario["login"];?>">
+            <input type="text" class="form-control" name="login" placeholder="digite seu login" value="<?php echo $funcionario["login"];?>" required>
         </div>
     </div>
     <div class="col-xs-3">
         <div class="form-group">
             <label for="senha">Senha</label>
-            <input type="password" class="form-control" name="senha" placeholder="digite sua senha" value="<?php echo $funcionario["senha"];?>">
+            <input type="password" class="form-control" name="senha" placeholder="digite sua senha" value="<?php echo $funcionario["senha"];?>" required>
         </div>
     </div>
 </div>
@@ -248,11 +248,11 @@
         <div class="form-group">
             <label for="nivel">Nível</label><br>
             <label class="radio-inline">
-                <input type="radio" name="nivel" value="0" <?php echo ($funcionario["nivel"] == 0)?'checked':'' ?>/>
+                <input type="radio" name="nivel" value="0" <?php echo ($funcionario["nivel"] == 0)?'checked':'' ?> required/>
                 Operador
             </label>
             <label class="radio-inline">
-                <input type="radio" name="nivel" value="1" <?php echo ($funcionario["nivel"] == 1)?'checked':'' ?> />
+                <input type="radio" name="nivel" value="1" <?php echo ($funcionario["nivel"] == 1)?'checked':'' ?> required/>
                 Administrador
             </label>
         </div>

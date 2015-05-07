@@ -1,55 +1,34 @@
 <?php
-if (!function_exists("GetSQLValueString")) {
-    function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "")
-    {
-        $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
+    $nivel_autorizado = "0,1";
+    $redirecionar_login = "../login.php";
+    include '../includes/verificar_acesso.php';
+?>
 
-        $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
+<?php
+    include '../includes/get_sql_value_string.php';
 
-        switch ($theType) {
-            case "text":
-                $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-                break;
-            case "long":
-            case "int":
-                $theValue = ($theValue != "") ? intval($theValue) : "NULL";
-                break;
-            case "double":
-                $theValue = ($theValue != "") ? "'" . doubleval($theValue) . "'" : "NULL";
-                break;
-            case "date":
-                $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-                break;
-            case "defined":
-                $theValue = ($theValue != "") ? $theDefinedValue : $theNotDefinedValue;
-                break;
-        }
-        return $theValue;
+    if(isset($_POST['os'])){
+        include '../conexao/data.php';
+
+        $sql  =  sprintf("UPDATE ordemservico SET Funcionario=%s, Data_Entrada=%s, Hora_Entrada=%s, Cliente=%s, Equipamento=%s, Modelo=%s, Marca=%s, Patrimonio=%s, Serie=%s, Setor=%s, Garantia=%s, Problemacliente=%s WHERE Cod_Equipamento=%s",
+                        GetSQLValueString($_POST['tecnico'], "text"),
+                        GetSQLValueString($_POST['data_entrada'], "text"),
+                        GetSQLValueString($_POST['hora_entrada'], "text"),
+                        GetSQLValueString($_POST['cliente'], "text"),
+                        GetSQLValueString($_POST['equipamento'], "text"),
+                        GetSQLValueString($_POST['modelo'], "text"),
+                        GetSQLValueString($_POST['marca'], "text"),
+                        GetSQLValueString($_POST['num_patrimonio'], "text"),
+                        GetSQLValueString($_POST['num_serie'], "text"),
+                        GetSQLValueString($_POST['setor'], "text"),
+                        GetSQLValueString($_POST['garantia'], "text"),
+                        GetSQLValueString($_POST['diagnostico'], "text"),
+                        GetSQLValueString($_POST['id'], "int"));
+
+        $result = mysql_query($sql, $data)  or die(mysql_error());
+        mysql_close($data);
+        header("location: index.php");
     }
-}
-
-if(isset($_POST['os'])){
-    include '../conexao/data.php';
-
-    $sql  =  sprintf("UPDATE ordemservico SET Funcionario=%s, Data_Entrada=%s, Hora_Entrada=%s, Cliente=%s, Equipamento=%s, Modelo=%s, Marca=%s, Patrimonio=%s, Serie=%s, Setor=%s, Garantia=%s, Problemacliente=%s WHERE Cod_Equipamento=%s",
-                    GetSQLValueString($_POST['tecnico'], "text"),
-                    GetSQLValueString($_POST['data_entrada'], "text"),
-                    GetSQLValueString($_POST['hora_entrada'], "text"),
-                    GetSQLValueString($_POST['cliente'], "text"),
-                    GetSQLValueString($_POST['equipamento'], "text"),
-                    GetSQLValueString($_POST['modelo'], "text"),
-                    GetSQLValueString($_POST['marca'], "text"),
-                    GetSQLValueString($_POST['num_patrimonio'], "text"),
-                    GetSQLValueString($_POST['num_serie'], "text"),
-                    GetSQLValueString($_POST['setor'], "text"),
-                    GetSQLValueString($_POST['garantia'], "text"),
-                    GetSQLValueString($_POST['diagnostico'], "text"),
-                    GetSQLValueString($_POST['id'], "int"));
-
-    $result = mysql_query($sql, $data)  or die(mysql_error());
-    mysql_close($data);
-    header("location: index.php");
-}
 ?>
 <?php
 if(empty($_POST['os'])){

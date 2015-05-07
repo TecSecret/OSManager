@@ -1,11 +1,17 @@
 <?php
-include '../conexao/data.php';
+    $nivel_autorizado = "0,1";
+    $redirecionar_login = "../login.php";
+    include '../includes/verificar_acesso.php';
+?>
 
-$id =  $_GET['id'];
+<?php
+    include '../conexao/data.php';
 
-$sql = "DELETE FROM ordemservico WHERE Cod_Equipamento = '$id'";
+    $id =  $_GET['id'];
 
-$dados  = mysql_query($sql) or die(mysql_error());;
+    $sql = "DELETE FROM ordemservico WHERE Cod_Equipamento = '$id'";
 
-header('location: index.php');
+    $dados  = mysql_query($sql) or die(mysql_error());;
+
+    header('location: index.php');
 ?>

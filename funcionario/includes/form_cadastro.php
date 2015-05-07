@@ -3,7 +3,7 @@
     <div class="col-xs-6">
         <div class="form-group">
             <label for="nome">Nome</label>
-            <input type="text" class="form-control" name="nome" placeholder="digite seu nome">
+            <input type="text" class="form-control" name="nome" placeholder="digite seu nome" required>
         </div>
     </div>
     <div class="col-xs-3">
@@ -15,7 +15,7 @@
     <div class="col-xs-3">
         <div class="form-group">
             <label for="cargo">Cargo</label>
-            <input type="text" class="form-control" name="cargo" placeholder="digite seu cargo">
+            <input type="text" class="form-control" name="cargo" placeholder="digite seu cargo" required>
         </div>
     </div>
 </div>
@@ -23,13 +23,13 @@
     <div class="col-xs-3">
         <div class="form-group">
             <label for="setor">Setor</label>
-            <input type="text" class="form-control" name="setor" placeholder="digite seu setor">
+            <input type="text" class="form-control" name="setor" placeholder="digite seu setor" required>
         </div>
     </div>
     <div class="col-xs-3">
         <div class="form-group">
             <label for="CPF">CPF</label>
-            <input type="text" class="form-control" name="CPF" data-mask="999.999.999-99" placeholder="digite seu CPF">
+            <input type="text" class="form-control" name="CPF" data-mask="999.999.999-99" placeholder="digite seu CPF" required>
         </div>
     </div>
     <div class="col-xs-3">
@@ -226,19 +226,19 @@
     <div class="col-xs-3">
         <div class="form-group">
             <label for="email">E-mail</label>
-            <input type="email" class="form-control" name="email" placeholder="digite seu email">
+            <input type="email" class="form-control" name="email" placeholder="digite seu email" required>
         </div>
     </div>
     <div class="col-xs-3">
         <div class="form-group">
             <label for="login">Login</label>
-            <input type="text" class="form-control" name="login" placeholder="digite seu login">
+            <input type="text" class="form-control" name="login" placeholder="digite seu login" required>
         </div>
     </div>
     <div class="col-xs-3">
         <div class="form-group">
             <label for="senha">Senha</label>
-            <input type="password" class="form-control" name="senha" placeholder="digite sua senha">
+            <input type="password" class="form-control" name="senha" placeholder="digite sua senha" required>
         </div>
     </div>
 </div>
@@ -247,11 +247,11 @@
         <div class="form-group">
             <label for="nivel">Nível</label><br>
             <label class="radio-inline">
-                <input type="radio" name="nivel" value="Operador" />
+                <input type="radio" name="nivel" value="Operador" required/>
                 Operador
             </label>
             <label class="radio-inline">
-                <input type="radio" name="nivel" value="Administrador" />
+                <input type="radio" name="nivel" value="Administrador"  required />
                 Administrador
             </label>
         </div>

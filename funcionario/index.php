@@ -1,7 +1,12 @@
-<?php include '../conexao/data.php';?>
 <?php
-$query = sprintf("SELECT codigo, nome, cpf, cargo, setor, login FROM funcionario ORDER BY codigo");
-$dados = mysql_query($query, $data) or die(mysql_error());
+    $nivel_autorizado = "1";
+    $redirecionar_login = "../login.php";
+    include '../includes/verificar_acesso.php';
+?>
+<?php
+    include '../conexao/data.php';
+    $query = sprintf("SELECT codigo, nome, cpf, cargo, setor, login FROM funcionario ORDER BY codigo");
+    $dados = mysql_query($query, $data) or die(mysql_error());
 ?>
 
 <!DOCTYPE html>

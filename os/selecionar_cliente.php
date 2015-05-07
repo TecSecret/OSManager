@@ -1,7 +1,13 @@
-<?php include '../conexao/data.php';?>
 <?php
-$query = sprintf("SELECT * FROM CLIENTE");
-$dados = mysql_query($query, $data) or die(mysql_error());
+    $nivel_autorizado = "0,1";
+    $redirecionar_login = "../login.php";
+    include '../includes/verificar_acesso.php';
+?>
+
+<?php
+    include '../conexao/data.php';
+    $query = sprintf("SELECT * FROM CLIENTE");
+    $dados = mysql_query($query, $data) or die(mysql_error());
 ?>
 
 <!DOCTYPE html>
