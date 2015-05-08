@@ -28,7 +28,7 @@ $dados = mysql_query($query, $data) or die(mysql_error());
                     </a>
                     <div class="row">
                         <div class="col-xs-12">
-                            <div class="table-responsive">
+                            <div class="table-responsive ">
                                 <table class="table table-striped">
                                     <thead>
                                     <tr>
@@ -51,10 +51,9 @@ $dados = mysql_query($query, $data) or die(mysql_error());
                                         <td><?=$linha['Equipamento']?></td>
                                         <td><?=$linha['Funcionario']?></td>
                                         <td>
-
+                                                <a href="fechar_os.php?id=<?php echo $linha['Cod_Equipamento'] ?>" class="btn-sm btn-warning">Fechar</a>
                                                 <a href="editar_os.php?id=<?php echo $linha['Cod_Equipamento'] ?>" class="btn-sm btn-primary">Editar</a>
                                                 <a href="deletar_os.php?id=<?php echo $linha['Cod_Equipamento'] ?>" class="btn-sm btn-danger">Deletar</a>
-
                                         </td>
                                     </tr>
                                     <?php
