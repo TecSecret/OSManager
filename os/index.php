@@ -5,7 +5,7 @@
 ?>
 <?php include '../conexao/data.php';?>
 <?php
-$query = sprintf("SELECT Cod_Equipamento, Cliente, Funcionario, Equipamento, Data_Entrada, Problemacliente FROM ordemservico ORDER BY Cod_Equipamento");
+$query = sprintf("SELECT Cod_Equipamento, Cliente, Funcionario, Equipamento, Data_Entrada, Problemacliente FROM ordemservico WHERE Arquivo = 'n' ORDER BY Cod_Equipamento");
 $dados = mysql_query($query, $data) or die(mysql_error());
 ?>
 
@@ -21,7 +21,7 @@ $dados = mysql_query($query, $data) or die(mysql_error());
                 <?php include '../includes/navbar_lateral.php';?>
                 <div class="col-sm-9 col-md-10 main">
                     <h1 class="page-header">
-                        Ordem de Serviços
+                        Ordem de Serviços em Aberto
                     </h1>
                     <a class="btn btn-labeled btn-success btn-md" href="selecionar_cliente.php">
                         <span class="btn-label" aria-hidden="true"><i class="glyphicon glyphicon-plus"></i></span> Inserir Ordem de Serviço

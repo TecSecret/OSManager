@@ -10,7 +10,7 @@ include '../includes/get_sql_value_string.php';
 if(isset($_POST['os'])){
     include '../conexao/data.php';
 
-    $sql  =  sprintf("UPDATE ordemservico SET Funcionario=%s, Data_Agenda=%s, Hora_Agenda=%s, DiagnosticoTecnico=%s , Solucao=%s, Previsaoentrega=%s, Dataentrega=%s, Recebido=%s, valor=%s WHERE Cod_Equipamento=%s",
+    $sql  =  sprintf("UPDATE ordemservico SET Funcionario=%s, Data_Agenda=%s, Hora_Agenda=%s, DiagnosticoTecnico=%s , Solucao=%s, Previsaoentrega=%s, Dataentrega=%s, Recebido=%s, valor=%s, Arquivo=%s WHERE Cod_Equipamento=%s",
         GetSQLValueString($_POST['tecnico'], "text"),
         GetSQLValueString($_POST['prev_diag'], "text"),
         GetSQLValueString($_POST['hora_diag'], "text"),
@@ -20,6 +20,7 @@ if(isset($_POST['os'])){
         GetSQLValueString($_POST['data_entr'], "text"),
         GetSQLValueString($_POST['recebido'], "text"),
         GetSQLValueString($_POST['valor'], "text"),
+        GetSQLValueString($_POST['arquivo'], "text"),
         GetSQLValueString($_POST['id'], "int"));
 
     $result = mysql_query($sql, $data)  or die(mysql_error());
