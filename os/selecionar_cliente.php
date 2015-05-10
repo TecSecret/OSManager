@@ -8,6 +8,7 @@
     include '../conexao/data.php';
     $query = sprintf("SELECT * FROM CLIENTE");
     $dados = mysql_query($query, $data) or die(mysql_error());
+    mysql_close($data);
 ?>
 
 <!DOCTYPE html>

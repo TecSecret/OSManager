@@ -1,3 +1,9 @@
+<?php
+    $nivel_autorizado = "0,1";
+    $redirecionar_login = "login.php";
+    include 'includes/verificar_acesso.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <?php include 'includes/head.php';?>

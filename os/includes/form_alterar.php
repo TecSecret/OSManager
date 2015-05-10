@@ -4,7 +4,7 @@
             <div class="col-xs-3">
                 <div class="form-group">
                     <label for="tecnico">Técnico</label>
-                    <input type="text" class="form-control" name="tecnico" placeholder="Digite o nome do técnico" value="<?php echo $ordem_servico['Funcionario']; ?>">
+                    <input type="text" class="form-control" name="tecnico" placeholder="Digite o nome do técnico" value="<?php echo $ordem_servico['Funcionario']; ?>" required>
                 </div>
             </div>
             <div class="col-xs-6">
@@ -70,7 +70,7 @@
         <div class="col-xs-6">
             <div class="form-group">
                 <label for="marca">Marca</label>
-                <input type="text" class="form-control" name="marca" placeholder="Digite a marca do equipamento" value="<?php echo $ordem_servico['Marca']; ?>">
+                <input type="text" class="form-control" name="marca" placeholder="Digite a marca do equipamento" value="<?php echo $ordem_servico['Marca']; ?>" required>
             </div>
         </div>
         <div class="col-xs-3">
@@ -87,7 +87,7 @@
         <div class="col-xs-12">
             <div class="form-group">
                 <label for="modelo">Modelo</label>
-                <input type="text" class="form-control" name="modelo"  placeholder="Digite o modelo do equipamento" value="<?php echo $ordem_servico['Modelo']; ?>">
+                <input type="text" class="form-control" name="modelo"  placeholder="Digite o modelo do equipamento" value="<?php echo $ordem_servico['Modelo']; ?>" required>
             </div>
         </div>
     </div>
@@ -115,7 +115,7 @@
         <div class="col-xs-4">
             <div class="form-group">
                 <label for="data_entrada">Data da Entrada:</label>
-                <input type="text" class="form-control" name="data_entrada" data-mask="99/99/9999" placeholder="Digite a data da entrada" value="<?php echo $ordem_servico['Data_Entrada']; ?>">
+                <input type="text" class="form-control" name="data_entrada" data-mask="99/99/9999" placeholder="Digite a data da entrada" value="<?php echo $ordem_servico['Data_Entrada']; ?>" required>
             </div>
         </div>
         <div class="col-xs-4">
@@ -129,7 +129,7 @@
         <div class="col-xs-6">
             <div class="form-group">
                 <label for="diagnostico">Diagnostico do cliente:</label>
-                <textarea class="form-control" rows="5" name="diagnostico"><?php echo $ordem_servico['Problemacliente']?></textarea>
+                <textarea class="form-control" rows="5" name="diagnostico" required><?php echo $ordem_servico['Problemacliente']?></textarea>
             </div>
         </div>
     </div>

@@ -7,6 +7,7 @@
 <?php
 $query = sprintf("SELECT Cod_Equipamento, Cliente, Funcionario, Equipamento, Data_Entrada, Problemacliente FROM ordemservico WHERE Arquivo = 'n' ORDER BY Cod_Equipamento");
 $dados = mysql_query($query, $data) or die(mysql_error());
+mysql_close($data);
 ?>
 
 <!DOCTYPE html>

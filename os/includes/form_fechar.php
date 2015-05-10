@@ -4,7 +4,7 @@
         <div class="col-xs-3">
             <div class="form-group">
                 <label for="tecnico">Técnico</label>
-                <input type="text" class="form-control" name="tecnico" placeholder="Digite o nome do técnico" value="<?php echo $ordem_servico['Funcionario']; ?>">
+                <input type="text" class="form-control" name="tecnico" placeholder="Digite o nome do técnico" value="<?php echo $ordem_servico['Funcionario']; ?>" required>
             </div>
         </div>
         <div class="col-xs-6">
@@ -130,7 +130,7 @@
         <div class="col-xs-12">
             <div class="form-group">
                 <label for="diag_tec">Diagnostico do Técnico</label>
-                <textarea class="form-control" rows="2" name="diag_tec"></textarea>
+                <textarea class="form-control" rows="2" name="diag_tec" required></textarea>
             </div>
         </div>
     </div>
@@ -138,7 +138,7 @@
         <div class="col-xs-12">
             <div class="form-group">
                 <label for="solucao">Solução</label>
-                <textarea class="form-control" rows="1" name="solucao"></textarea>
+                <textarea class="form-control" rows="1" name="solucao" required></textarea>
             </div>
         </div>
     </div>
@@ -175,7 +175,7 @@
         <div class="col-xs-3">
             <div class="form-group">
                 <input name="arquivo" type="hidden" id="arquivo" value="s" />
-                <button id="os" name="os" type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
+                <button id="os" name="os" type="submit" class="btn btn-primary btn-lg">Fechar</button>
             </div>
         </div>
     </div>

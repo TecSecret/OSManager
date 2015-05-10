@@ -75,7 +75,7 @@
     <div class="col-xs-3">
         <div class="form-group">
             <label for="num_filho">N filhos:</label>
-            <input type="text" class="form-control" name="num_filho" placeholder="0">
+            <input type="text" class="form-control" name="num_filhos" placeholder="0">
         </div>
     </div>
 </div>
@@ -146,13 +146,13 @@
     <div class="col-xs-3">
         <div class="form-group">
             <label for="fone_comercial">Fone Comercial</label>
-            <input type="text" class="form-control" name="fone_comercial" data-mask="(99)9999-9999" placeholder="(XX)XXXX-XXXX">
+            <input type="text" class="form-control" name="fone_com" data-mask="(99)9999-9999" placeholder="(XX)XXXX-XXXX">
         </div>
     </div>
     <div class="col-xs-3">
         <div class="form-group">
             <label for="fone_residencial">Fone Residencial</label>
-            <input type="text" class="form-control" name="fone_residencial" data-mask="(99)9999-9999" placeholder="(XX)XXXX-XXXX">
+            <input type="text" class="form-control" name="fone_res" data-mask="(99)9999-9999" placeholder="(XX)XXXX-XXXX">
         </div>
     </div>
     <div class="col-xs-2">
