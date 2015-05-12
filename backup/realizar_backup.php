@@ -30,7 +30,6 @@
         $gerar = True;
         header('Content-Disposition: attachment; filename=clientes.xml');
         header('Content-Type: text/xml');
-
         echo $xml->saveXML();
     }elseif(isset($_POST['realizar_funcionario'])){
         $funcionarios = mysql_query("select * from funcionario", $data);

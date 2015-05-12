@@ -56,23 +56,3 @@
         </div>
     </form>
 </div>
-
-<!---->
-<!--<form enctype="multipart/form-data" name="importar_cliente" method="POST" action=" ">-->
-<!--    <div class="row">-->
-<!--        <div class="col-xs-6">-->
-<!--            <div class="form-group">-->
-<!--                <label for="xmlcliente">Enviar .XML de Cliente</label>-->
-<!--                <input type="file" class="form-control" name="xmlcliente" placeholder="Selecione o arquivo">-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!---->
-<!--    <div class="row">-->
-<!--        <div class="col-xs-3">-->
-<!--            <div class="form-group">-->
-<!--                <button id="importar_cliente" name="importar_cliente" type="submit" class="btn btn-primary btn-lg">Enviar</button>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</form>-->

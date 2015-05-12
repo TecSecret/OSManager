@@ -6,7 +6,9 @@
 
 <?php
     include '../conexao/data.php';
+    $sucesso = False;
     $dir_xml = 'xml/';
+
     if (isset($_FILES['xmlcliente'])){
         $xml = simplexml_load_file($_FILES['xmlcliente']['tmp_name']);
 
@@ -16,7 +18,8 @@
                         '$cliente->celular','$cliente->endereco','$cliente->bairro','$cliente->cidade','$cliente->estado', '$cliente->cep')";
             mysql_query($sql, $data);
         }
-        header("location: index.php");
+        $sucesso = True;
+//        header("location: index.php");
         mysql_close($data);
     }
     if (isset($_FILES['xmlfuncionario'])){
@@ -31,7 +34,8 @@
                         '$funcionario->login', '$funcionario->senha', '$funcionario->nivel')";
             mysql_query($sql, $data);
         }
-        header("location: index.php");
+        $sucesso = True;
+//        header("location: index.php");
         mysql_close($data);
     }
     if (isset($_FILES['xmlos'])){
@@ -45,7 +49,8 @@
                         '$os->Recebido', '$os->Arquivo', '$os->valor')";
             mysql_query($sql, $data);
         }
-        header("location: index.php");
+        $sucesso = True;
+//        header("location: index.php");
         mysql_close($data);
     }
 
@@ -67,6 +72,12 @@
             <h1 class="page-header">
                 Importar Backup
             </h1>
+            <?php if ($sucesso == True): ?>
+                <div class="alert alert-success">
+                    <a href="#" class="close" data-dismiss="alert">&times;</a>
+                    <strong>Sucesso!</strong> Ficheiro importado com sucesso.
+                </div>
+            <?php endif; ?>
             <?php include 'includes/form_importar.php';?>
         </div>
     </div>
