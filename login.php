@@ -70,6 +70,7 @@ if (isset($_POST['form-login'])) {
         <![endif]-->
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="bootstrap/css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="bootstrap/fontawesome/css/font-awesome.min.css">
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
         <!-- script references -->
@@ -79,13 +80,13 @@ if (isset($_POST['form-login'])) {
     </head>
     <body>
         <div class="container">
-            <form class="form-signin" name="form-login" method="POST">
-                <h2 class="form-signin-heading">Login:</h2>
-                <label for="login" class="sr-only">Email</label>
+            <form class="form-signin" name="form-login" method="POST" action=" ">
+                <h2 class="form-signin-heading">Login</h2>
+
                 <input type="text" name="login" class="form-control" placeholder="digite seu login" required autofocus>
                 <label for="inputPassword" class="sr-only">Senha</label>
                 <input type="password" name="senha" class="form-control" placeholder="digite sua senha" required>
-                <button class="btn btn-lg btn-primary btn-block" type="submit" name="form-login">Confirmar</button>
+                <button class="btn btn-lg btn-primary btn-block" type="submit" name="form-login"><i class="glyphicon glyphicon-check"></i>  Logar</button>
             </form>
         </div>
     </body>

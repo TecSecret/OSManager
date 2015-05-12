@@ -71,7 +71,7 @@ if(isset($_POST['pesquisar'])) {
                     </h1>
                     <nav class="navbar navbar-default">
                         <div class="navbar-form navbar-left">
-                            <a class="btn btn-labeled btn-success navbar-nav navbar-right" href="add_os.php">
+                            <a class="btn btn-labeled btn-success navbar-nav navbar-right" href="selecionar_cliente.php">
                                 <span class="btn-label" aria-hidden="true"><i class="glyphicon glyphicon-plus"></i></span> Inserir Ordem de Serviço
                             </a>
                         </div>
@@ -107,6 +107,8 @@ if(isset($_POST['pesquisar'])) {
                                         <th>Equipamento</th>
                                         <th>Funcionário</th>
                                         <th>Ações</th>
+                                        <th></th>
+                                        <th></th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -119,9 +121,13 @@ if(isset($_POST['pesquisar'])) {
                                         <td><?=$linha['Equipamento']?></td>
                                         <td><?=$linha['Funcionario']?></td>
                                         <td>
-                                                <a href="fechar_os.php?id=<?php echo $linha['Cod_Equipamento'] ?>" class="btn-sm btn-warning">Fechar</a>
-                                                <a href="editar_os.php?id=<?php echo $linha['Cod_Equipamento'] ?>" class="btn-sm btn-primary">Editar</a>
-                                                <a href="deletar_os.php?id=<?php echo $linha['Cod_Equipamento'] ?>" class="btn-sm btn-danger">Deletar</a>
+                                                <a href="fechar_os.php?id=<?php echo $linha['Cod_Equipamento'] ?>" class="btn-sm btn-warning"> Fechar</a>
+                                        </td>
+                                        <td>
+                                                <a href="editar_os.php?id=<?php echo $linha['Cod_Equipamento'] ?>" class="btn-sm btn-primary"> Editar</a>
+                                         </td>
+                                        <td>
+                                                <a href="deletar_os.php?id=<?php echo $linha['Cod_Equipamento'] ?>" class="btn-sm btn-danger"> Deletar</a>
                                         </td>
                                     </tr>
                                     <?php

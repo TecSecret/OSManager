@@ -262,6 +262,7 @@
     <div class="col-xs-3">
         <div class="form-group">
             <button id="funcionario" name="funcionario" type="submit" class="btn btn-primary btn-lg">Editar</button>
+            <a class="btn btn-info btn-lg" href="../funcionario">Voltar</a>
         </div>
     </div>
 </div>

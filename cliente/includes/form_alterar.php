@@ -104,6 +104,7 @@
         <div class="col-xs-3">
             <div class="form-group">
                 <button id="cliente" name="cliente" type="submit" class="btn btn-primary btn-lg">Editar</button>
+                <a class="btn btn-info btn-lg" href="../cliente">Voltar</a>
             </div>
         </div>
     </div>

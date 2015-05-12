@@ -114,8 +114,8 @@ footer {
     border-top-right-radius: 0;
 }
 
-table {
-    table-layout: fixed;
-    word-wrap: break-word;
-    overflow: hidden;
-}
+/*table {*/
+    /*table-layout: fixed;*/
+    /*word-wrap: break-word;*/
+    /*overflow: hidden;*/
+/*}*/
