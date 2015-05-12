@@ -247,11 +247,11 @@
         <div class="form-group">
             <label for="nivel">Nível</label><br>
             <label class="radio-inline">
-                <input type="radio" name="nivel" value="Operador" required/>
+                <input type="radio" name="nivel" value="0" required/>
                 Operador
             </label>
             <label class="radio-inline">
-                <input type="radio" name="nivel" value="Administrador"  required />
+                <input type="radio" name="nivel" value="1"  required />
                 Administrador
             </label>
         </div>

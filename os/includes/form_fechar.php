@@ -39,7 +39,7 @@
         <div class="col-xs-6">
             <div class="form-group">
                 <label for="telefones">Telefones</label>
-                <p><?=$cliente['fone_com']?> | <?=$cliente['fone_res']?> | <?=$cliente['celular']?></p>
+                <p><?=$cliente['fone_com']?> <?=$cliente['fone_res']?> <?=$cliente['celular']?></p>
             </div>
         </div>
     </div>
