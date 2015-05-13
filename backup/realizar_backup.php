@@ -3,13 +3,12 @@
     $redirecionar_login = "../login.php";
     include '../includes/verificar_acesso.php';
 ?>
-
 <?php
     include '../conexao/data.php';
     $gerar = false;
     if (isset($_POST['realizar_cliente'])){
+        $xml = new SimpleXMLElement("<xml/>");
         $clientes = mysql_query("select * from cliente", $data);
-        $xml = new SimpleXMLElement('<xml/>');
         while($cliente = mysql_fetch_assoc($clientes)){
             $info = $xml->addChild('cliente');
             $info->addChild('codigo', $cliente['codigo']);
@@ -30,7 +29,9 @@
         $gerar = True;
         header('Content-Disposition: attachment; filename=clientes.xml');
         header('Content-Type: text/xml');
+
         echo $xml->saveXML();
+
     }elseif(isset($_POST['realizar_funcionario'])){
         $funcionarios = mysql_query("select * from funcionario", $data);
         $xml = new SimpleXMLElement('<xml/>');
@@ -67,8 +68,9 @@
 
         mysql_close($data);
         $gerar = True;
-        header('Content-Disposition: attachment; filename=funcionario.xml');
         header('Content-Type: text/xml');
+        header('Content-Disposition: attachment; filename=funcionario.xml');
+
 
         echo $xml->saveXML();
     }elseif(isset($_POST['realizar_os'])) {
@@ -98,7 +100,7 @@
             $info->addChild('Recebido', $ordemservico['Recebido']);
             $info->addChild('Arquivo', $ordemservico['Arquivo']);
             $info->addChild('valor', $ordemservico['valor']);
-        
+
         }
 
         mysql_close($data);

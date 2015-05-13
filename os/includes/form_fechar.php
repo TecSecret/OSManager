@@ -108,7 +108,7 @@
         <div class="col-xs-3">
             <div class="form-group">
                 <label for="prev_diag">Previsão do Diagnostico Tec.</label>
-                <input type="text" class="form-control" name="prev_diag" data-mask="99/99/9999" placeholder="Digite a Data">
+                <input type="text" class="form-control" name="prev_diag" data-mask="99/99/9999" value="<?php echo date('d/m/Y')?>" placeholder="Digite a Data">
             </div>
         </div>
         <div class="col-xs-3">
@@ -147,13 +147,13 @@
         <div class="col-xs-4">
             <div class="form-group">
                 <label for="prev_entr">Previsão de Entrega</label>
-                <input type="text" class="form-control" name="prev_entr" data-mask="99/99/9999" placeholder="Digite a data">
+                <input type="text" class="form-control" name="prev_entr" data-mask="99/99/9999" value="<?php echo date('d/m/Y')?>" placeholder="Digite a data">
             </div>
         </div>
         <div class="col-xs-4">
             <div class="form-group">
                 <label for="data_entr">Data Entrega</label>
-                <input type="text" class="form-control" name="data_entr" data-mask="99/99/9999" placeholder="Digite a data da entrega">
+                <input type="text" class="form-control" name="data_entr" data-mask="99/99/9999" value="<?php echo date('d/m/Y')?>" placeholder="Digite a data da entrega">
             </div>
         </div>
         <div class="col-xs-4">

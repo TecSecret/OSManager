@@ -117,7 +117,7 @@
     <div class="col-xs-4">
         <div class="form-group">
             <label for="data_entrada">Data da Entrada:</label>
-            <input type="text" class="form-control" name="data_entrada" data-mask="99/99/9999" placeholder="Digite a data da entrada" required>
+            <input type="text" class="form-control" name="data_entrada" data-mask="99/99/9999" placeholder="Digite a data da entrada" value="<?php echo date('d/m/Y')?>" required>
         </div>
     </div>
     <div class="col-xs-4">
