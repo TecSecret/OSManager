@@ -64,10 +64,10 @@
         <div class="form-group">
             <label for="num_filho">Estado Civil:</label>
             <select name="estado_civil" class="form-control">
-                <option <?php if ($funcionario["estado_civil"]== "SOLTEIRO(a)") echo "selected"; ?> value="Solteiro(a)">Solteiro(a)</option>
-                <option <?php if ($funcionario["estado_civil"]== "CASADO(a)") echo "selected"; ?> value="Casado(a)">Casado(a)</option>
-                <option <?php if ($funcionario["estado_civil"]== "VÍUVO(a)") echo "selected"; ?> value="Víuvo(a)">Víuvo(a)</option>
-                <option <?php if ($funcionario["estado_civil"]== "SEPARADO(a)") echo "selected"; ?> value="Separado(a)">Separado(a)</option>
+                <option <?php if ($funcionario["estado_civil"]== "Solteiro(a)") echo "selected"; ?> value="Solteiro(a)">Solteiro(a)</option>
+                <option <?php if ($funcionario["estado_civil"]== "Casado(a)") echo "selected"; ?> value="Casado(a)">Casado(a)</option>
+                <option <?php if ($funcionario["estado_civil"]== "Víuvo(a)") echo "selected"; ?> value="Víuvo(a)">Víuvo(a)</option>
+                <option <?php if ($funcionario["estado_civil"]== "Separado(a)") echo "selected"; ?> value="Separado(a)">Separado(a)</option>
 
             </select>
         </div>
@@ -169,20 +169,20 @@
         <div class="form-group">
             <label for="escolaridade">Escolaridade</label><br>
             <label class="radio-inline">
-                <input type="radio" name="escolaridade" value="1º Grau" <?php echo ($funcionario["escolaridade"] == "1&ordm; Grau")?'checked':'' ?>/>
-                1&ordm; Grau
+                <input type="radio" name="escolaridade" value="1º Grau" <?php echo ($funcionario["escolaridade"] == "1º Grau")?'checked':'' ?>/>
+                1º Grau
             </label>
             <label class="radio-inline">
-                <input type="radio" name="escolaridade" value="2º Grau" <?php echo ($funcionario["escolaridade"] == "2&ordm; Grau")?'checked':'' ?>/>
-                2&ordm; Grau
+                <input type="radio" name="escolaridade" value="2º Grau" <?php echo ($funcionario["escolaridade"] == "2º Grau")?'checked':'' ?>/>
+                2º Grau
             </label>
             <label class="radio-inline">
-                <input type="radio" name="escolaridade" value="3º Grau" <?php echo ($funcionario["escolaridade"] == "3&ordm; Grau")?'checked':'' ?>/>
-                3&ordm; Grau
+                <input type="radio" name="escolaridade" value="3º Grau" <?php echo ($funcionario["escolaridade"] == "3º Grau")?'checked':'' ?>/>
+                3º Grau
             </label>
             <label class="radio-inline">
                 <input type="radio" name="escolaridade" value="Pós Graduado" <?php echo ($funcionario["escolaridade"] == "Pós Graduado")?'checked':'' ?>/>
-                P&oacute;s Graduado
+                Pós Graduado
             </label>
             <label class="radio-inline">
                 <input type="radio" name="escolaridade" value="Mestrado" <?php echo ($funcionario["escolaridade"] == "Mestrado")?'checked':'' ?>/>
@@ -194,7 +194,7 @@
             </label>
             <label class="radio-inline">
                 <input type="radio" name="escolaridade" value="Pós Doutorado" <?php echo ($funcionario["escolaridade"] == "Pós Doutorado")?'checked':'' ?>/>
-                P&oacute;s Doutorado </label>
+                Pós Doutorado </label>
         </div>
     </div>
 </div>

@@ -1,32 +1,5 @@
 <?php
-if (!function_exists("GetSQLValueString")) {
-    function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "")
-    {
-        $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
-
-        $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
-
-        switch ($theType) {
-            case "text":
-                $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-                break;
-            case "long":
-            case "int":
-                $theValue = ($theValue != "") ? intval($theValue) : "NULL";
-                break;
-            case "double":
-                $theValue = ($theValue != "") ? "'" . doubleval($theValue) . "'" : "NULL";
-                break;
-            case "date":
-                $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-                break;
-            case "defined":
-                $theValue = ($theValue != "") ? $theDefinedValue : $theNotDefinedValue;
-                break;
-        }
-        return $theValue;
-    }
-}
+include 'includes/get_sql_value_string.php';
 if (!isset($_SESSION)) {
     session_start();
 }
@@ -81,12 +54,13 @@ if (isset($_POST['form-login'])) {
     <body>
         <div class="container">
             <form class="form-signin" name="form-login" method="POST" action=" ">
-                <h2 class="form-signin-heading">Login</h2>
-
+                <img src="includes/logo.png" width="320">
+                <br><br>
                 <input type="text" name="login" class="form-control" placeholder="digite seu login" required autofocus>
+                <br>
                 <label for="inputPassword" class="sr-only">Senha</label>
                 <input type="password" name="senha" class="form-control" placeholder="digite sua senha" required>
-                <button class="btn btn-lg btn-primary btn-block" type="submit" name="form-login"><i class="glyphicon glyphicon-check"></i>  Logar</button>
+                <button class="btn btn-lg btn-primary btn-block" type="submit" name="form-login"><i class="glyphicon glyphicon-log-in"></i>  Entrar</button>
             </form>
         </div>
     </body>

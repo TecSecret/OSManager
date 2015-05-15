@@ -12,7 +12,7 @@
 
                     <ul class="dropdown-menu" role="menu">
                         <li>
-                            <a href="../logout.php"><i class="glyphicon glyphicon-log-out"></i> Logout</a>
+                            <a href="../logout.php"><i class="glyphicon glyphicon-log-out"></i> Sair</a>
                         </li>
                     </ul>
                 </li>

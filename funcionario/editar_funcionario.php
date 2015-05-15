@@ -79,3 +79,4 @@ if(empty($_POST['funcionario'])){
     <?php include '../includes/rodape.php';?>
 
 </body>
+</html>

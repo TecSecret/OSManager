@@ -56,7 +56,7 @@ if(empty($_POST['os'])){
         <?php include '../includes/navbar_lateral.php';?>
         <div class="col-sm-9 col-md-10 main">
             <h1 class="page-header">
-                Editar Ordem de Serviço
+                Fechar Ordem de Serviço
             </h1>
             <?php include 'includes/form_fechar.php';?>
         </div>

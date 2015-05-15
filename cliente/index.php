@@ -65,9 +65,10 @@
                     <h1 class="page-header">
                         Clientes
                     </h1>
+
                     <nav class="navbar navbar-default">
                         <div class="navbar-form navbar-left">
-                            <a class="btn btn-labeled btn-success navbar-nav navbar-right" href="add_cliente.php">
+                            <a class="btn btn-labeled btn-success" href="add_cliente.php">
                                 <span class="btn-label" aria-hidden="true"><i class="glyphicon glyphicon-plus"></i></span> Inserir Cliente
                             </a>
                         </div>

@@ -33,6 +33,12 @@
                 <input type="text" class="form-control" name="fone_res" data-mask="(99)9999-9999" placeholder="(XX)XXXX-XXXX">
             </div>
         </div>
+        <div class="col-xs-3">
+            <div class="form-group">
+                <label for="celular">Celular</label>
+                <input type="text" class="form-control" name="celular" data-mask="(99)9999-9999" placeholder="(XX)XXXX-XXXX">
+            </div>
+        </div>
     </div>
     <div class="row">
 
@@ -105,6 +111,7 @@
         <div class="col-xs-3">
             <div class="form-group">
                 <button id="cliente" name="cliente" type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
+                <a class="btn btn-info btn-lg" href="../cliente">Voltar</a>
             </div>
         </div>
     </div>

@@ -52,6 +52,7 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+<meta charset="UTF-8">
     <?php include '../includes/head.php';?>
     <?php include '../includes/bootstrap.php';?>
     <body>

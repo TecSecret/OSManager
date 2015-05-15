@@ -15,7 +15,8 @@
                 </select>
             </div>
         </div>
-
+    </div>
+    <div class="row">
         <div class="col-xs-6">
             <div class="form-group">
                 <label for="endereco">Endereco</label>
@@ -176,6 +177,7 @@
             <div class="form-group">
                 <input name="arquivo" type="hidden" id="arquivo" value="s" />
                 <button id="os" name="os" type="submit" class="btn btn-primary btn-lg">Fechar</button>
+                <a class="btn btn-info btn-lg" href="../os">Voltar</a>
             </div>
         </div>
     </div>

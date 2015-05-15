@@ -169,19 +169,19 @@
             <label for="escolaridade">Escolaridade</label><br>
             <label class="radio-inline">
                 <input type="radio" name="escolaridade" value="1º Grau" />
-                1&ordm; Grau
+                1º Grau
             </label>
             <label class="radio-inline">
                 <input type="radio" name="escolaridade" value="2º Grau" />
-                2&ordm; Grau
+                2º Grau
             </label>
             <label class="radio-inline">
                 <input type="radio" name="escolaridade" value="3º Grau" />
-                3&ordm; Grau
+                3º Grau
             </label>
             <label class="radio-inline">
                 <input type="radio" name="escolaridade" value="Pós Graduado" />
-                P&oacute;s Graduado
+                Pós Graduado
             </label>
             <label class="radio-inline">
                 <input type="radio" name="escolaridade" value="Mestrado" />
@@ -193,7 +193,7 @@
             </label>
             <label class="radio-inline">
                 <input type="radio" name="escolaridade" value="Pós Doutorado" />
-                P&oacute;s Doutorado </label>
+                Pós Doutorado </label>
         </div>
     </div>
 </div>
@@ -261,6 +261,7 @@
     <div class="col-xs-3">
         <div class="form-group">
             <button id="funcionario" name="funcionario" type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
+            <a class="btn btn-info btn-lg" href="../funcionario">Voltar</a>
         </div>
     </div>
 </div>

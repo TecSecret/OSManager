@@ -73,12 +73,12 @@
                     <div class="col-xs-6">
                         <h2 class="sub-header">Ultimas OS Entregues</h2>
                         <div class="table-responsive">
-                            <table class="table table-striped ">
+                            <table class="table table-striped table-condensed">
                                 <thead>
                                 <tr>
                                     <th>Código</th>
                                     <th>Funcionário</th>
-                                    <th>Problema</th>
+                                    <th>Detalhes</th>
                                 </tr>
                                 </thead>
                                 <tbody>

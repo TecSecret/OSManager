@@ -34,6 +34,12 @@
                 <input type="text" class="form-control" name="fone_res" data-mask="(99)9999-9999" placeholder="(XX)XXXX-XXXX" value="<?php echo $cliente["fone_res"]; ?>">
             </div>
         </div>
+        <div class="col-xs-3">
+            <div class="form-group">
+                <label for="celular">Celular</label>
+                <input type="text" class="form-control" name="celular" data-mask="(99)9999-9999" placeholder="(XX)XXXX-XXXX" value="<?php echo $cliente["celular"];?>">
+            </div>
+        </div>
     </div>
     <div class="row">
 

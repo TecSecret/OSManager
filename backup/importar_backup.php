@@ -27,11 +27,11 @@
 
         foreach($xml as $funcionario){
             $sql = "INSERT INTO funcionario (nome, apelido, cargo, setor, cpf, rg, ctps, data_nasc, estado_civil, numero_filhos, tipo_sanguineo, email, fone_com,
-                                fone_res, celular, escolaridade, situacao, ano, endereco, bairro,  login, senha, nivel)
+                                fone_res, celular, escolaridade, situacao, ano, endereco, bairro, cidade, estado, cep, login, senha, nivel)
                 VALUES ('$funcionario->nome', '$funcionario->apelido', '$funcionario->cargo','$funcionario->setor','$funcionario->cpf',
                         '$funcionario->rg','$funcionario->ctps','$funcionario->data_nasc','$funcionario->estado_civil','$funcionario->numero_filhos', '$funcionario->tipo_sanguineo', '$funcionario->email','$funcionario->fone_com',
-                        '$funcionario->fone_res', '$funcionario->celular', '$funcionario->escolaridade', '$funcionario->situacao', '$funcionario->ano', '$funcionario->endereco', '$funcionario->bairro',
-                        '$funcionario->login', '$funcionario->senha', '$funcionario->nivel')";
+                        '$funcionario->fone_res', '$funcionario->celular', '$funcionario->escolaridade', '$funcionario->situacao', '$funcionario->ano', '$funcionario->endereco', '$funcionario->bairro', '$funcionario->cidade', '$funcionario->estado',
+                        '$funcionario->cep','$funcionario->login', '$funcionario->senha', '$funcionario->nivel')";
             mysql_query($sql, $data);
         }
         $sucesso = True;
