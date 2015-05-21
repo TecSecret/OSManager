@@ -96,7 +96,8 @@
                                 <th>ID</th>
                                 <th>Nome</th>
                                 <th>CPF</th>
-                                <th>Ações</th>
+                                <th class="col-xs-1">Ações</th>
+                                <th class="col-xs-1"></th>
                              </tr>
                             </thead>
                             <tbody>
@@ -108,6 +109,8 @@
                                 
                                 <td>
                                     <a href="editar_cliente.php?id=<?php echo $linha['codigo'] ?>" class="btn-sm btn-primary">Editar</a>
+                                </td>
+                                <td>
                                     <a href="deletar_cliente.php?id=<?php echo $linha['codigo'] ?>" class="btn-sm btn-danger">Deletar</a>
                                 </td>
                             </tr>

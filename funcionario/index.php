@@ -65,6 +65,7 @@
                     <h1 class="page-header">
                         Funcionários
                     </h1>
+
                     <nav class="navbar navbar-default">
                         <div class="navbar-form navbar-left">
                             <a class="btn btn-labeled btn-success navbar-nav navbar-right" href="add_funcionario.php">
@@ -99,7 +100,8 @@
                                 <th>Cargo</th>
                                 <th>Setor</th>
                                 <th>Login</th>
-                                <th>Ações</th>
+                                <th class="col-xs-1">Ações</th>
+                                <th class="col-xs-1"></th>
                             </tr>
                             </thead>
                             <tbody>
@@ -113,8 +115,11 @@
                                 <td><?=$linha['login']?></td>
                                 <td>
                                     <a href="editar_funcionario.php?id=<?php echo $linha['codigo'] ?>" class="btn-sm btn-primary">Editar</a>
+                                </td>
+                                <td colspan="1">
                                     <a href="deletar_funcionario.php?id=<?php echo $linha['codigo'] ?>" class="btn-sm btn-danger">Deletar</a>
                                 </td>
+
                             </tr>
                             <?php
                             }
