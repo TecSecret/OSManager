@@ -29,7 +29,7 @@
 <link href="bootstrap/css/styles.css" rel="stylesheet">
 
 <!-- script references -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="bootstrap/js/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="bootstrap/js/scripts.js"></script>
 <body>
